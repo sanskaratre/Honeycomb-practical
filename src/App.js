@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import UserList from './components/UserList';
+import {Routes, Route } from 'react-router-dom';
+import DetailPage from './components/DetailPage';
 
-function App() {
+  function App() {
+   
+   
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route path = "/" element = {<><h1 style={{ textAlign: 'center' , backgroundColor:"#a58b8b"}}>User List</h1>
+      <UserList /></>} />
+      <Route path = "/:id" element = { <DetailPage /> } />
+      </Routes>
+      <br></br>
+      <br></br>
+      <hr></hr>
+      <span> {new Date().getFullYear() } </span>
     </div>
   );
 }

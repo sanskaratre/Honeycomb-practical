@@ -1,0 +1,7 @@
+.detail {
+box-sizing: content-box;
+width: 98%;
+border: solid #bd6200 5px;
+padding: 5px;
+background-color: rgb(189, 245, 245);
+  }
